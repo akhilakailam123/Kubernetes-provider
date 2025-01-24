@@ -1,3 +1,12 @@
+resource "aws_s3_bucket" "example" {
+  bucket = "my-tf-test-bucket-9121"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
+
 resource "kubernetes_namespace" "test" {
   metadata {
     name = "terraform-namespace"
